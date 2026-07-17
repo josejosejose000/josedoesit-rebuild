@@ -2,8 +2,8 @@ import home from '../data/home-content.json';
 
 /** Curated homepage showcase — one standout per service area */
 export const SHOWCASE_PHOTOS = [
-  { folder: 'mounting-installation', file: 'mount-samsung-80-inch-tv-and-6ft-painting-mounting.png' },
-  { folder: 'furniture-assembly', file: 'furniture-sectional-sofa-assembly-brooklyn.png' },
+  { folder: 'mounting-installation', file: 'mount-samsung-80-inch-tv-and-6ft-painting-mounting.jpg' },
+  { folder: 'furniture-assembly', file: 'furniture-sectional-sofa-assembly-brooklyn.jpg' },
   { folder: 'paint-stain-wallpaper', file: 'paint-neutragen-painting-walls-queens.jpg' },
   { folder: 'carpentry', file: 'carp-custom-wood-shelf-carpentry-queens.jpg' },
   { folder: 'decks-sheds', file: 'deck-shed-deck-build-forest-hills.jpg' },
@@ -12,7 +12,7 @@ export const SHOWCASE_PHOTOS = [
   { folder: 'mounting-installation', file: 'mount-barn-doors-install-queens.jpg' },
   { folder: 'paint-stain-wallpaper', file: 'paint-painting.jpg' },
   { folder: 'carpentry', file: 'carp-desk-made-reclaimed-wood-carpentry-queens.jpg' },
-  { folder: 'furniture-assembly', file: 'furniture-assembly-flatpack-queens.png' },
+  { folder: 'furniture-assembly', file: 'furniture-assembly-flatpack-queens.jpg' },
   { folder: 'paint-stain-wallpaper', file: 'paint-painting-floors-and-moulding.jpg' },
 ] as const;
 
@@ -24,6 +24,6 @@ export const HOME_META = {
 
 export const HERO_VIDEO = {
   mp4: '/videos/welcome-video-portrait.mp4',
-  poster: '/images/home/jdi-background.png',
+  poster: '/images/home/jdi-background.jpg',
   label: 'Jose Does It handyman services in Brooklyn, Queens, and Long Island',
 } as const;
