@@ -1,0 +1,15 @@
+---
+import { getGroupedGalleryItems } from '../lib/gallery';
+import PhotoMasonry from './PhotoMasonry.astro';
+
+interface Props {
+  folder: string;
+  lightbox?: boolean;
+}
+
+const { folder, lightbox = true } = Astro.props;
+
+const items = getGroupedGalleryItems(folder);
+---
+
+<PhotoMasonry items={items} lightbox={lightbox} />

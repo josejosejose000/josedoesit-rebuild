@@ -1,0 +1,2 @@
+# Image deletion disabled — all files restored to manifest.
+# Do not delete files from this list; duplicates remain on disk intentionally.

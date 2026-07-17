@@ -1,0 +1,22 @@
+---
+import { PHONE, PHONE_TEL } from '../lib/site';
+
+interface Props {
+  heading: string;
+  description: string;
+  class?: string;
+}
+
+const { heading, description, class: className = '' } = Astro.props;
+---
+
+<section class={`section-padding border-t border-gray-100 bg-gray-50/50 ${className}`}>
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
+    <h2 class="text-xl md:text-2xl font-bold tracking-tight mb-4 uppercase">{heading}</h2>
+    <p class="text-sm text-gray-600 mb-8 max-w-lg mx-auto leading-relaxed">{description}</p>
+    <a href="/book" class="btn-primary">Book Now</a>
+    <p class="mt-5 text-xs text-gray-500">
+      Or call <a href={PHONE_TEL} class="hover:underline">{PHONE}</a>
+    </p>
+  </div>
+</section>

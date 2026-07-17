@@ -1,0 +1,96 @@
+{
+  "mounting": [
+    {"item": "TV (under 40 inches)", "time": "15-30 minutes"},
+    {"item": "TV (over 40 inches)", "time": "30-45 minutes"},
+    {"item": "Sconces", "time": "15-30 minutes"},
+    {"item": "Ceiling Fan", "time": "1-2 hours"},
+    {"item": "Projector", "time": "30-45 minutes"},
+    {"item": "Sink Faucet", "time": "30-45 minutes"},
+    {"item": "Bidet", "time": "45-60 minutes"},
+    {"item": "Water Filter System (under counter)", "time": "1-2 hours"},
+    {"item": "Coat Hook", "time": "15-30 minutes"},
+    {"item": "Large Shelf", "time": "30-60 minutes"},
+    {"item": "Small Shelf", "time": "15-30 minutes"},
+    {"item": "Gallery Wall (6 pieces)", "time": "30-60 minutes"},
+    {"item": "Smart Camera Installation", "time": "30-45 minutes"},
+    {"item": "Under Cabinet Microwave", "time": "1-2 hours"},
+    {"item": "Wire Shelf System", "time": "30-60 minutes"},
+    {"item": "Under Cabinet Lighting", "time": "30-45 minutes"},
+    {"item": "Drawer Dividers", "time": "15-30 minutes"},
+    {"item": "Wine Rack", "time": "15-30 minutes"},
+    {"item": "Baby Gate", "time": "30-45 minutes"},
+    {"item": "Cabinet Hardware", "time": "3-5 minutes (depends on number of knobs/pulls)"},
+    {"item": "Chandelier", "time": "3-4 hours"},
+    {"item": "Closet Doors", "time": "1 hour per set"},
+    {"item": "Garage Door Opener", "time": "2-3 hours"},
+    {"item": "Vanity", "time": "30 min - 1 hour"},
+    {"item": "Medicine cabinet", "time": "15-30 min"},
+    {"item": "Toilet", "time": "2 - 4 hours (removing old toilet and potential need for additional plumbing work can add time)"},
+    {"item": "Sink", "time": "2 hours (may involve additional plumbing depending on existing setup)"},
+    {"item": "Bathtub or shower", "time": "2 - 4 hours (can be more depending on size, weight, and whether the surround needs modification)"},
+    {"item": "Showerhead", "time": "30 minutes - 1 hour"}
+  ],
+  "furniture": {
+    "bedFrame": [
+      {"item": "Simple metal frame", "time": "15-30 min"},
+      {"item": "Platform bed", "time": "1-2 hours"},
+      {"item": "Bunk bed", "time": "2-3 hours"}
+    ],
+    "chairs": [
+      {"item": "Sofa", "time": "30 min - 1 hour"},
+      {"item": "Sectional sofa", "time": "1-2 hours"},
+      {"item": "loveseat", "time": "30 min - 1 hour"},
+      {"item": "ottoman", "time": "15-30 min"},
+      {"item": "Armchair", "time": "15-30 min"},
+      {"item": "Futon", "time": "30 min - 1 hour"}
+    ],
+    "homeOffice": [
+      {"item": "Desk", "time": "30 min - 1 hour"},
+      {"item": "Large desk", "time": "3-6 hours"},
+      {"item": "Chair", "time": "15-30 min"},
+      {"item": "Bookcase", "time": "30 min - 1 hour"},
+      {"item": "Filing cabinet", "time": "30 min - 1 hour"}
+    ],
+    "dresser": [
+      {"item": "Small 3-drawer dresser", "time": "1 hours"},
+      {"item": "Large 6-drawer dresser", "time": "2-3 hours"},
+      {"item": "Wardrobe", "time": "2-4 hours"}
+    ],
+    "tvStands": [
+      {"item": "Small TV stand", "time": "1-2 hours"},
+      {"item": "Large entertainment center", "time": "2-4 hours"},
+      {"item": "Coffee table", "time": "15-30 min"},
+      {"item": "Lamp", "time": "5-10 min"}
+    ],
+    "homeGym": [
+      {"item": "Weight bench", "time": "30 min - 1 hour"},
+      {"item": "Treadmill", "time": "1-2 hours"},
+      {"item": "Elliptical trainer", "time": "1-2 hours"},
+      {"item": "Cable machine", "time": "1-3 hours"},
+      {"item": "Power rack", "time": "1-3 hours"}
+    ],
+    "outdoor": [
+      {"item": "Small Shed (6x8 feet or smaller)", "time": "4-6 hours"},
+      {"item": "Medium Shed (8x10 to 10x12 feet)", "time": "6-8 hours"},
+      {"item": "Large Shed (12x16- 16 x 16)", "time": "8-12 hours"},
+      {"item": "Small deck (8x8 feet or smaller)", "time": "4-6 hours"},
+      {"item": "Medium Deck (8x10 to 10x12 feet)", "time": "6-8 hours"},
+      {"item": "Large Deck ( 10x12 - 12x16)", "time": "8-12 hours"},
+      {"item": "Hammock Stand", "time": "15-30 min"},
+      {"item": "Porch Swing", "time": "30 min - 1 hour (May require additional time for hanging hardware)"}
+    ]
+  },
+  "painting": {
+    "painting": [
+      {"item": "Small Room (up to 200 sq. ft)", "time": "2-3 hours for one coat"},
+      {"item": "Medium Room (200-400 sq. ft)", "time": "4-5 hours for one coat"},
+      {"item": "Large Room (400+ sq. ft)", "time": "6-7 hours for one coat"}
+    ],
+    "wallpaper": [
+      {"item": "Small Room (up to 200 sq. ft)", "time": "6-8 hours"},
+      {"item": "Medium Room (200-400 sq. ft)", "time": "8-10 hours"},
+      {"item": "Large Room (400+ sq. ft)", "time": "10-12 hours"}
+    ]
+  },
+  "note": "These are estimates. Actual time can vary. $80 first hour, $65 additional."
+}

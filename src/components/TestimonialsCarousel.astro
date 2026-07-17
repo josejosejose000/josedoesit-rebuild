@@ -1,0 +1,107 @@
+---
+import testimonials from '../data/testimonials.json';
+
+interface Props {
+  intro?: string;
+}
+
+const { intro = 'What Clients Say' } = Astro.props;
+---
+
+<section class="section-padding border-t border-gray-100 bg-gray-50/50">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6">
+    <h2 class="text-center text-xs uppercase tracking-[0.25em] mb-10 md:mb-14 text-gray-500">
+      {intro}
+    </h2>
+
+    <div id="testimonials-carousel" class="relative">
+      {testimonials.map((t, i) => (
+        <div class={`testimonial-slide${i === 0 ? ' active' : ''}`} data-index={i}>
+          <blockquote class="text-center">
+            <p class="text-sm md:text-base leading-relaxed text-gray-700 italic">
+              &ldquo;{t.quote}&rdquo;
+            </p>
+            <cite class="block mt-6 text-sm font-semibold not-italic tracking-wide">
+              — {t.name}
+            </cite>
+          </blockquote>
+        </div>
+      ))}
+
+      <div class="flex items-center justify-center gap-4 mt-10">
+        <button class="carousel-arrow" id="carousel-prev" type="button" aria-label="Previous testimonial">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+          </svg>
+        </button>
+
+        <div class="flex gap-2" id="carousel-dots" role="tablist" aria-label="Testimonials">
+          {testimonials.map((_, i) => (
+            <button
+              type="button"
+              class={`carousel-dot${i === 0 ? ' active' : ''}`}
+              data-index={i}
+              role="tab"
+              aria-label={`Go to testimonial ${i + 1}`}
+              aria-selected={i === 0}
+            ></button>
+          ))}
+        </div>
+
+        <button class="carousel-arrow" id="carousel-next" type="button" aria-label="Next testimonial">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <p class="text-center mt-10 text-xs tracking-[0.15em] uppercase">
+      <a href="/faq" class="hover:underline">Read More Reviews &amp; FAQ →</a>
+    </p>
+  </div>
+</section>
+
+<script>
+  const slides = document.querySelectorAll('.testimonial-slide');
+  const dots = document.querySelectorAll('.carousel-dot');
+  let current = 0;
+  let autoplay: ReturnType<typeof setInterval> | null = null;
+
+  function goTo(index: number) {
+    current = ((index % slides.length) + slides.length) % slides.length;
+    slides.forEach((s, i) => s.classList.toggle('active', i === current));
+    dots.forEach((d, i) => {
+      d.classList.toggle('active', i === current);
+      d.setAttribute('aria-selected', String(i === current));
+    });
+  }
+
+  function startAutoplay() {
+    stopAutoplay();
+    autoplay = setInterval(() => goTo(current + 1), 6000);
+  }
+
+  function stopAutoplay() {
+    if (autoplay) clearInterval(autoplay);
+  }
+
+  document.getElementById('carousel-prev')?.addEventListener('click', () => {
+    goTo(current - 1);
+    startAutoplay();
+  });
+
+  document.getElementById('carousel-next')?.addEventListener('click', () => {
+    goTo(current + 1);
+    startAutoplay();
+  });
+
+  dots.forEach((dot) => {
+    dot.addEventListener('click', () => {
+      goTo(Number(dot.getAttribute('data-index')));
+      startAutoplay();
+    });
+  });
+
+  startAutoplay();
+</script>

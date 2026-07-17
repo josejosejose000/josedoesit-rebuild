@@ -1,0 +1,70 @@
+---
+import Layout from '../layouts/Layout.astro';
+import faqMd from '../data/faq.md?raw';
+import { parseFaq } from '../lib/faq';
+
+const sections = parseFaq(faqMd);
+---
+
+<Layout
+  title="Handyman FAQ Queens, Brooklyn & Long Island | Jose Does It"
+  description="FAQ about Jose Does It handyman services in Queens 11375, Brooklyn & Long Island. Booking, pricing ($80/$65 hr), insurance, furniture assembly, mounting & more."
+>
+  <article class="section-padding">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6">
+      <header class="mb-10 md:mb-14">
+        <h1 class="text-3xl md:text-4xl font-bold tracking-tight uppercase mb-5">
+          Handyman FAQ
+        </h1>
+        <p class="text-sm md:text-base leading-relaxed text-gray-600">
+          Common questions about booking, pricing, services, and what to expect when you hire Jose Does It.
+        </p>
+      </header>
+
+      <div class="space-y-12 md:space-y-16">
+        {sections.map((section) => (
+          <section>
+            <h2 class="font-bold text-xs md:text-sm tracking-[0.2em] uppercase mb-6 pb-3 border-b border-gray-200">
+              {section.title}
+            </h2>
+
+            {section.intro && (
+              <p class="text-sm md:text-base leading-relaxed text-gray-600" set:html={section.intro} />
+            )}
+
+            {section.items.length > 0 && (
+              <div class="divide-y divide-gray-100 border-t border-gray-100">
+                {section.items.map((item) => (
+                  <details class="faq-item group">
+                    <summary class="flex items-start justify-between gap-4 py-5 cursor-pointer list-none text-sm md:text-base font-semibold leading-snug hover:text-gray-600 transition-colors">
+                      <span>{item.question}</span>
+                      <span class="faq-chevron shrink-0 mt-1 text-gray-400 group-open:rotate-180 transition-transform duration-200" aria-hidden="true">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                      </span>
+                    </summary>
+                    <div class="pb-5 pr-8 text-sm leading-relaxed text-gray-600" set:html={item.answer} />
+                  </details>
+                ))}
+              </div>
+            )}
+          </section>
+        ))}
+      </div>
+
+      <aside class="mt-12 md:mt-16 pt-8 border-t border-gray-200 text-center">
+        <p class="text-sm text-gray-600 mb-6">
+          Still have a question? Call <a href="tel:3478563025" class="hover:underline">(347) 856-3025</a> or book online.
+        </p>
+        <a href="/book" class="btn-primary">Schedule Your Appointment</a>
+      </aside>
+    </div>
+  </article>
+</Layout>
+
+<style>
+  .faq-item summary::-webkit-details-marker {
+    display: none;
+  }
+</style>

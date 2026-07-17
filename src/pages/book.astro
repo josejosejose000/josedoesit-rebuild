@@ -1,0 +1,29 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ContactSection from '../components/ContactSection.astro';
+import AcuityEmbed from '../components/AcuityEmbed.astro';
+---
+
+<Layout
+  title="Book Your Service | Jose Does It — Handyman Queens, Brooklyn & Long Island"
+  description="Schedule handyman service in Queens 11375, Brooklyn or Long Island. Book online or call (347) 856-3025. TV mounting, furniture assembly, painting & more."
+  acuity={true}
+>
+  <article class="section-padding">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      <header class="mb-8 md:mb-10">
+        <h1 class="text-3xl md:text-4xl font-bold tracking-tight uppercase mb-4">Schedule Your Appointment</h1>
+        <p class="text-sm md:text-base text-gray-600 leading-relaxed">
+          Choose a date and time that works best for you. Need more time? Book extra time upfront to ensure we can thoroughly complete your service.
+        </p>
+        <p class="mt-3 text-sm text-gray-500">
+          Use the calendar below to select your service. We'll collect more details about your appointment in the next step.
+        </p>
+      </header>
+
+      <AcuityEmbed eager />
+    </div>
+  </article>
+
+  <ContactSection class="bg-gray-50/50" />
+</Layout>

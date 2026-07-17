@@ -1,0 +1,527 @@
+{
+  "summary": "Jose Does It image manifest \u2014 owner-written gallery copy (Jul 2026).",
+  "galleries": {
+    "decks-sheds": {
+      "images": [
+        {
+          "file": "deck-shed-deck-build-forest-hills.jpg",
+          "title": "Shed and Deck Build in Forest Hills",
+          "alt": "Shed and deck combo installed in Forest Hills, Queens by Jose Does It.",
+          "description": "Shed and deck combo installed. Good outdoor storage and deck work for Queens neighborhoods."
+        },
+        {
+          "file": "deck-build-example-long-island.gif",
+          "title": "Rubbermaid Shed on Concrete Pad \u2014 Long Island",
+          "alt": "Rubbermaid storage shed built on a concrete pad on Long Island by Jose Does It.",
+          "description": "Rubbermaid shed built on a concrete pad on Long Island.",
+          "projectId": "deck-build-long-island"
+        },
+        {
+          "file": "deck-projectpnagh7.png",
+          "title": "Rubbermaid Shed on Concrete Pad \u2014 Long Island",
+          "alt": "Rubbermaid storage shed built on a concrete pad on Long Island by Jose Does It.",
+          "description": "Rubbermaid shed built on a concrete pad on Long Island.",
+          "projectId": "deck-build-long-island"
+        },
+        {
+          "file": "deck-projecto9vx1v.png",
+          "title": "Backyard Shed and Deck Installation",
+          "alt": "Backyard shed and deck installation in Bed Stuy, Brooklyn by Jose Does It.",
+          "description": "Shed sitting on a solid base in a Bed Stuy yard. Reliable shed and deck builds from Brooklyn to Long Island.",
+          "projectId": "deck-shed-trio"
+        },
+        {
+          "file": "deck-projectxwxuyd.png",
+          "title": "Backyard Shed and Deck Installation",
+          "alt": "Backyard shed and deck installation in Bed Stuy, Brooklyn by Jose Does It.",
+          "description": "Additional photo from the same Bed Stuy shed and deck installation.",
+          "projectId": "deck-shed-trio"
+        },
+        {
+          "file": "deck-projecttaszbc.png",
+          "title": "Backyard Shed and Deck Installation",
+          "alt": "Backyard shed and deck installation in Bed Stuy, Brooklyn by Jose Does It.",
+          "description": "Additional photo from the same Bed Stuy shed and deck installation.",
+          "projectId": "deck-shed-trio"
+        },
+        {
+          "file": "deck-projectkfbvo5.png",
+          "title": "Backyard Deck and Shed Work Queens",
+          "alt": "decks and sheds project photo \u2014 professional decks and sheds handyman service in Queens, Brooklyn, or Long Island by Jose Does It LLC",
+          "description": "Completed outdoor deck and shed work in a Queens residential backyard."
+        },
+        {
+          "file": "deck-projectmhdzpr.png",
+          "title": "Metal Shed Installation \u2014 Valley Stream",
+          "alt": "Metal storage shed installed in Valley Stream, Long Island by Jose Does It.",
+          "description": "Metal shed installed in Valley Stream.",
+          "projectId": "deck-outdoor-pair"
+        },
+        {
+          "file": "deck-projectgshnzx.png",
+          "title": "Metal Shed Installation \u2014 Valley Stream",
+          "alt": "Metal shed installation in Valley Stream by Jose Does It.",
+          "description": "Additional photo from the same Valley Stream metal shed installation.",
+          "projectId": "deck-outdoor-pair"
+        }
+      ]
+    },
+    "furniture-assembly": {
+      "images": [
+        {
+          "file": "furniture-sectional-sofa-assembly-brooklyn.png",
+          "title": "Rooftop Furniture Assembly Greenpoint",
+          "alt": "Sectional sofa assembled on a Greenpoint Brooklyn rooftop by Jose Does It.",
+          "description": "Sectional sofa assembly on a Greenpoint rooftop \u2014 tap to view flat-pack pieces from the same job.",
+          "projectId": "living-room-setup"
+        },
+        {
+          "file": "furniture-assembly-flatpack-queens.png",
+          "title": "Rooftop Furniture Assembly Greenpoint",
+          "alt": "Flat-pack furniture assembled on a Greenpoint Brooklyn rooftop by Jose Does It.",
+          "description": "Flat-pack furniture assembly on the same Greenpoint rooftop project.",
+          "projectId": "living-room-setup"
+        },
+        {
+          "file": "furniture-kids-bunk-bed-assembly-forest-hills.jpg",
+          "title": "Kids Bunk Bed Assembly in Forest Hills Queens",
+          "alt": "White wooden bunk bed with ladder assembled in a kids bedroom in Forest Hills Queens. Professional furniture assembly services.",
+          "description": "Twin-over-twin bunk bed with safety rails and ladder assembled in a Forest Hills, Queens kids room."
+        },
+        {
+          "file": "furniture-projectntklto.png",
+          "title": "Baby Room Complete",
+          "alt": "Baby room furniture assembly \u2014 crib, changing table, and rocking chair \u2014 by Jose Does It.",
+          "description": "Crib, changing table, and rocking chair assembled by yours truly.",
+          "projectId": "bedroom-furniture-set"
+        },
+        {
+          "file": "furniture-projectjezbof.png",
+          "title": "Baby Room Complete",
+          "alt": "furniture assembly project photo \u2014 professional furniture assembly handyman service in Queens, Brooklyn, or Long Island by Jose Does It LLC",
+          "description": "Part of the same baby room furniture assembly project.",
+          "projectId": "bedroom-furniture-set"
+        },
+        {
+          "file": "furniture-armchair-assembly-queens.png",
+          "title": "Baby Room Complete",
+          "alt": "Six-drawer dresser assembly in a Queens home. Professional furniture assembly services.",
+          "description": "Part of the same baby room furniture assembly project.",
+          "projectId": "bedroom-furniture-set"
+        },
+        {
+          "file": "furniture-baby-rocker-chair-assembly-queens.jpg",
+          "title": "Baby Room Complete",
+          "alt": "Baby rocker chair assembly in a Queens nursery. Careful furniture assembly for children's items.",
+          "description": "Part of the same baby room furniture assembly project.",
+          "projectId": "bedroom-furniture-set"
+        },
+        {
+          "file": "furniture-shoe-shelf-assembly.jpg",
+          "title": "Shoe Shelf Assembly Queens",
+          "alt": "shoe shelf assembly \u2014 professional furniture assembly handyman service in Queens, Brooklyn, or Long Island by Jose Does It LLC",
+          "description": "Shoe storage shelf assembled and secured in a Queens home."
+        },
+        {
+          "file": "furniture-extra-05.png",
+          "title": "Grill Assembly Queens",
+          "alt": "Outdoor grill assembly in Queens. Professional patio and outdoor furniture assembly.",
+          "description": "Outdoor grill assembly and setup in Queens \u2014 tap to view both photos from this project.",
+          "projectId": "grill-assembly-pair"
+        },
+        {
+          "file": "furniture-projectrg9z99.png",
+          "title": "Grill Assembly Queens",
+          "alt": "furniture assembly project photo \u2014 professional furniture assembly handyman service in Queens, Brooklyn, or Long Island by Jose Does It LLC",
+          "description": "Additional grill assembly photo from the same Queens project.",
+          "projectId": "grill-assembly-pair"
+        },
+        {
+          "file": "furniture-project30pvt9.png",
+          "title": "Furniture Assembly \u2014 Before and After",
+          "alt": "furniture assembly project photo \u2014 professional furniture assembly handyman service in Queens, Brooklyn, or Long Island by Jose Does It LLC",
+          "description": "Furniture assembly before photo from a Queens project.",
+          "projectId": "assembly-before-after"
+        },
+        {
+          "file": "furniture-projectnvnq2n.png",
+          "title": "Furniture Assembly \u2014 Before and After",
+          "alt": "furniture assembly project photo \u2014 professional furniture assembly handyman service in Queens, Brooklyn, or Long Island by Jose Does It LLC",
+          "description": "Same Queens room after furniture assembly \u2014 finished setup.",
+          "projectId": "assembly-before-after"
+        },
+        {
+          "file": "furniture-project3ixre5.png",
+          "title": "Gazebo Assembly Specialists",
+          "alt": "Gazebo assembly and repair by Jose Does It.",
+          "description": "We can build your new gazebo or figure out why the old one leaks."
+        },
+        {
+          "file": "furniture-projectqqxh8v.png",
+          "title": "Metal Double Twin Bunk Bed \u2014 Astoria",
+          "alt": "Metal double twin bunk bed assembly in Astoria, Queens by Jose Does It.",
+          "description": "Metal double twin bunk bed assembled in Astoria."
+        },
+        {
+          "file": "furniture-project1euzcx.png",
+          "title": "PRX Pro System \u2014 Canarsie",
+          "alt": "PRX pro system installation in Canarsie, Brooklyn by Jose Does It.",
+          "description": "PRX pro system installed in Canarsie."
+        },
+        {
+          "file": "furniture-projectsj6prv.png",
+          "title": "IKEA Malm Assembly \u2014 Lower Manhattan",
+          "alt": "IKEA Malm furniture assembly in Lower Manhattan by Jose Does It.",
+          "description": "IKEA Malm assembled in Lower Manhattan."
+        },
+        {
+          "file": "furniture-projectu6lbji.png",
+          "title": "Desk and Chair Assembly \u2014 NYC",
+          "alt": "Desk and chair assembly across NYC by Jose Does It.",
+          "description": "Raising productivity with desk and chair assemblies across the 5 boroughs."
+        },
+        {
+          "file": "furniture-projectgctbic.png",
+          "title": "IKEA PAX Assembly \u2014 Staten Island",
+          "alt": "IKEA PAX wardrobe assembly in Staten Island by Jose Does It.",
+          "description": "This is the 153rd time I've assembled a PAX \u2014 this particular one is in Staten Island.",
+          "projectId": "assembly-pair"
+        },
+        {
+          "file": "furniture-projecti6igdm.png",
+          "title": "IKEA PAX Assembly \u2014 Staten Island",
+          "alt": "furniture assembly project photo \u2014 professional furniture assembly handyman service in Queens, Brooklyn, or Long Island by Jose Does It LLC",
+          "description": "Additional photo from the same Staten Island PAX assembly.",
+          "projectId": "assembly-pair"
+        },
+        {
+          "file": "furniture-projectecxxpq.png",
+          "title": "Office Reception Area Overhaul",
+          "alt": "Office reception area furniture assembly and setup by Jose Does It.",
+          "description": "Complete office reception area overhaul."
+        },
+        {
+          "file": "furniture-projectvcm4ks.png",
+          "title": "IKEA Micke Desk \u2014 Red Hook",
+          "alt": "IKEA Micke desk assembly in Red Hook, Brooklyn by Jose Does It.",
+          "description": "IKEA Micke desk assembly in Red Hook."
+        },
+        {
+          "file": "furniture-projectlizd01.png",
+          "title": "Wayfair Closet System \u2014 Springfield Gardens",
+          "alt": "Wayfair closet system installation in Springfield Gardens, Queens by Jose Does It.",
+          "description": "Wayfair closet system install in Springfield Gardens."
+        },
+        {
+          "file": "furniture-projectxqimaj.png",
+          "title": "File Cabinet Assembly \u2014 Midwood, Brooklyn",
+          "alt": "File cabinet assembly for a Midwood, Brooklyn middle school by Jose Does It.",
+          "description": "File cabinets assembled for a middle school in Midwood, Brooklyn."
+        },
+        {
+          "file": "furniture-projectomqvgj.png",
+          "title": "Spa Furniture Assembly \u2014 Bayside, Queens",
+          "alt": "Console table and bookshelf assembly for a spa in Bayside, Queens by Jose Does It.",
+          "description": "Just relax! Console table and bookshelf assembled for a spa in Bayside, Queens."
+        },
+        {
+          "file": "furniture-project68nt6n.png",
+          "title": "Bed Assembly \u2014 NYC",
+          "alt": "Bed assembly across NYC by Jose Does It.",
+          "description": "I've assembled more beds than Amazon has for sale."
+        }
+      ]
+    },
+    "paint-stain-wallpaper": {
+      "images": [
+        {
+          "file": "paint-neutragen-painting-walls-queens.jpg",
+          "title": "Painting, Lighting & Furniture — Manhattan",
+          "alt": "Interior painting, light fixture installation, and furniture assembly in Manhattan by Jose Does It.",
+          "description": "This exceptionally pretty project included painting walls, installing light fixtures, and assembling furniture. Somewhere in Manhattan."
+        },
+        {
+          "file": "paint-painting.jpg",
+          "title": "Commercial Painting \u2014 SoHo, Manhattan",
+          "alt": "Large commercial interior painting in SoHo, Manhattan by Jose Does It.",
+          "description": "Painting of a large commercial space in SoHo, Manhattan."
+        },
+        {
+          "file": "paint-drywall-hanging-mud-queens.jpg",
+          "title": "Drywall and Mudding in Brooklyn",
+          "alt": "Drywall hanging and mudding in a bathroom by Jose Does It.",
+          "description": "Drywall hanging and mudding done in a bathroom. Solid prep work.",
+          "projectId": "bathroom-drywall"
+        },
+        {
+          "file": "paint-projectykt3zf.png",
+          "title": "Drywall and Mudding in Brooklyn",
+          "alt": "painting, staining, and wallpaper project photo \u2014 professional painting, staining, and wallpaper handyman service in Queens, Brooklyn, or Long Island by Jose Does It LLC",
+          "description": "Follow-up photo from the same drywall and mudding project.",
+          "projectId": "bathroom-drywall"
+        },
+        {
+          "file": "paint-project3se9ri.png",
+          "title": "HYPEBEAST Bike Stand \u2014 Nigel Sylvester",
+          "alt": "Bike stand painted for Nigel Sylvester at HYPEBEAST by Jose Does It.",
+          "description": "I painted a bike stand for Nigel Sylvester @ HYPEBEAST. I also hung those photos.",
+          "projectId": "interior-paint-trio"
+        },
+        {
+          "file": "paint-project5gdafr.png",
+          "title": "HYPEBEAST Bike Stand \u2014 Nigel Sylvester",
+          "alt": "Bike stand painted for Nigel Sylvester at HYPEBEAST by Jose Does It.",
+          "description": "Additional photo from the Nigel Sylvester @ HYPEBEAST project.",
+          "projectId": "interior-paint-trio"
+        },
+        {
+          "file": "paint-projectfig1nx.png",
+          "title": "HYPEBEAST Bike Stand \u2014 Nigel Sylvester",
+          "alt": "Bike stand painted for Nigel Sylvester at HYPEBEAST by Jose Does It.",
+          "description": "Additional photo from the Nigel Sylvester @ HYPEBEAST project.",
+          "projectId": "interior-paint-trio"
+        },
+        {
+          "file": "paint-projectnjkisf.png",
+          "title": "Floor Painting \u2014 Manhattan",
+          "alt": "Floor painting and light fixture installation in Manhattan by Jose Does It.",
+          "description": "I can't take credit for the entire transformation, but I did paint the floors and install the light fixtures.",
+          "projectId": "manhattan-floor-pair"
+        },
+        {
+          "file": "paint-projectbouiti.png",
+          "title": "Floor Painting \u2014 Manhattan",
+          "alt": "Manhattan room after floor painting and transformation by Jose Does It.",
+          "description": "Same Manhattan room after the floor painting and transformation.",
+          "projectId": "manhattan-floor-pair"
+        },
+        {
+          "file": "paint-projectobdds9.png",
+          "title": "Vibrant Accent Wall \u2014 Brooklyn",
+          "alt": "Vibrant accent wall painting in Brooklyn by Jose Does It.",
+          "description": "Vibrant accent wall that stands out in Brooklyn.",
+          "projectId": "custom-painting-pair"
+        },
+        {
+          "file": "paint-projectol3buq.png",
+          "title": "Vibrant Accent Wall \u2014 Brooklyn",
+          "alt": "painting, staining, and wallpaper project photo \u2014 professional painting, staining, and wallpaper handyman service in Queens, Brooklyn, or Long Island by Jose Does It LLC",
+          "description": "Additional photo from the same Brooklyn accent wall project.",
+          "projectId": "custom-painting-pair"
+        },
+        {
+          "file": "paint-projectzik6zq.png",
+          "title": "Stair Staining Queens",
+          "alt": "Wooden stairs stained by Jose Does It in Queens, Brooklyn, or Long Island.",
+          "description": "Interior wood stair treads and risers stained in a Queens home."
+        },
+        {
+          "file": "paint-projectdtpgd1.png",
+          "title": "Bathroom Painting Project \u2014 Queens",
+          "alt": "Vibrant bathroom painting in Queens by Jose Does It.",
+          "description": "Vibrant bathroom painting in Queens."
+        },
+        {
+          "file": "paint-painting-floors-and-moulding.jpg",
+          "title": "Full Repaint \u2014 Brooklyn",
+          "alt": "Full interior repaint and LVP installation in Brooklyn by Jose Does It.",
+          "description": "Full repaint in Brooklyn. This project also included LVP installation.",
+          "projectId": "interior-floors-moulding-pair"
+        },
+        {
+          "file": "paint-projectosivgf.png",
+          "title": "Full Repaint \u2014 Brooklyn",
+          "alt": "painting, staining, and wallpaper project photo \u2014 professional painting, staining, and wallpaper handyman service in Queens, Brooklyn, or Long Island by Jose Does It LLC",
+          "description": "Additional photo from the same Brooklyn repaint and LVP project.",
+          "projectId": "interior-floors-moulding-pair"
+        },
+        {
+          "file": "paint-projectnivqeo.png",
+          "title": "Pegboard, Cabinet & Floor Painting",
+          "alt": "Pegboard wall, cabinet, and floor painting project by Jose Does It.",
+          "description": "I installed and painted the pegboard wall, also painted cabinets and floors and installed the moulding."
+        },
+        {
+          "file": "paint-projectdfj35x.png",
+          "title": "Interior Painting \u2014 Carroll Gardens",
+          "alt": "Interior wall painting in Carroll Gardens, Brooklyn by Jose Does It.",
+          "description": "Interior wall painting completed in Carroll Gardens."
+        }
+      ]
+    },
+    "carpentry": {
+      "images": [
+        {
+          "file": "carp-project6rmusr.png",
+          "title": "Custom Bookshelf with Arched Fascia",
+          "alt": "Custom built-in bookshelf with arched fascia and concealed false wall behind it, installed by Jose Does It.",
+          "description": "Built-in bookshelf with arched fascia trim; includes a false wall concealed behind the unit."
+        },
+        {
+          "file": "carp-projectwyh4ez.png",
+          "title": "Custom Bar \u2014 Brooklyn",
+          "alt": "Custom bar built in Brooklyn by Jose Does It.",
+          "description": "Custom bar built in Brooklyn."
+        },
+        {
+          "file": "carp-projectlpnnve.png",
+          "title": "Custom Sliding Door \u2014 South Brooklyn",
+          "alt": "Custom sliding door built in South Brooklyn by Jose Does It.",
+          "description": "Custom sliding door in South Brooklyn."
+        },
+        {
+          "file": "carp-projectzc7asw.png",
+          "title": "Custom Box \u2014 JDI Van",
+          "alt": "Custom carpentry box built in the Jose Does It van.",
+          "description": "Custom box built in the JDI van."
+        },
+        {
+          "file": "carp-projectiyrs8z.png",
+          "title": "Custom Carpentry Project \u2014 Queens",
+          "alt": "Custom carpentry with clean cuts and solid finish in Queens by Jose Does It.",
+          "description": "Finished a detailed custom wood piece with clean cuts and solid finish. Precision work for Queens homes."
+        },
+        {
+          "file": "carp-projectq2ecfq.png",
+          "title": "Custom Sound Panels \u2014 Public Announcement Global",
+          "alt": "Custom sound panels installed at Public Announcement Global offices by Jose Does It.",
+          "description": "Custom sound panels installed in Public Announcement Global offices."
+        },
+        {
+          "file": "carp-projectcwoj8a.png",
+          "title": "Custom Cubby \u2014 Williamsburg",
+          "alt": "Custom cubby installed in Williamsburg, Brooklyn by Jose Does It.",
+          "description": "Custom cubby installed in Williamsburg."
+        },
+        {
+          "file": "carp-projecteqtigt.png",
+          "title": "Custom Bench \u2014 SoHo Coffee Shop",
+          "alt": "Custom bench built for a SoHo coffee shop by Jose Does It.",
+          "description": "Custom bench in a trendy coffee shop in SoHo."
+        },
+        {
+          "file": "carp-custom-wood-shelf-carpentry-queens.jpg",
+          "title": "Custom Wood Shelf and Desk Queens",
+          "alt": "Custom wooden shelf and desk built in a Queens apartment by Jose Does It.",
+          "description": "Custom wood shelf and platform desk with under-storage, built in a Queens apartment."
+        },
+        {
+          "file": "carp-desk-made-reclaimed-wood-carpentry-queens.jpg",
+          "title": "Reclaimed Wood Desk Build",
+          "alt": "Reclaimed wood desk built in a Williamsburg office by Jose Does It.",
+          "description": "Heavy reclaimed wood desk put together in a Williamsburg office."
+        }
+      ]
+    },
+    "mounting-installation": {
+      "images": [
+        {
+          "file": "mount-samsung-80-inch-tv-and-6ft-painting-mounting.png",
+          "title": "Samsung 80 Inch Tv And 6ft Painting Mounting \u2014 Jose Does It Mounting And Installation",
+          "alt": "samsung 80 inch tv and 6ft painting mounting \u2014 professional mounting and installation handyman service in Queens, Brooklyn, or Long Island by Jose Does It LLC",
+          "description": "Mounted an 80-inch Samsung TV and a large painting with concealed hardware in Queens."
+        },
+        {
+          "file": "mount-tv-with-floating-stand-and-wire-concealment.jpg",
+          "title": "TV and Floating Stand Mounting Queens",
+          "alt": "Large TV mounted above a floating console with hidden wires in a Queens home. Clean TV mounting and wire concealment services.",
+          "description": "Flat-screen TV on a low floating stand with cables neatly hidden. Professional TV mounting with wire management in Queens."
+        },
+        {
+          "file": "mount-barn-doors-install-queens.jpg",
+          "title": "Barn Doors Installation in Queens Bedroom",
+          "alt": "White sliding barn doors on black hardware installed in a modern bedroom in Queens. Professional mounting and installation services.",
+          "description": "Double white barn-style doors on a black track in a bedroom. Shows precise installation for space-saving room dividers in Queens homes."
+        },
+        {
+          "file": "mount-copper-pot-shelf-and-pan-hanging-installation.png",
+          "title": "Copper Pot Shelf And Pan Hanging Installation \u2014 Jose Does It Mounting And Installation",
+          "alt": "copper pot shelf and pan hanging installation \u2014 professional mounting and installation handyman service in Queens, Brooklyn, or Long Island by Jose Does It LLC",
+          "description": "copper pot shelf and pan hanging installation \u2014 professional mounting and installation handyman service in Queens, Brooklyn, or Long Island by Jose Does It LLC"
+        },
+        {
+          "file": "mount-projector-install.jpg",
+          "title": "Projector Ceiling Mount Installation",
+          "alt": "Projector mounted to ceiling in a room. Specialized ceiling mounting for home theater equipment.",
+          "description": "Ceiling-mounted projector in a residential setting. Expert installation for entertainment systems."
+        },
+        {
+          "file": "mount-mirror-installation.jpg",
+          "title": "Large Mirror Installation Queens NY",
+          "alt": "Oval mirror hung on a wall during professional installation. Reliable mirror and artwork mounting in Queens, Brooklyn, and Long Island.",
+          "description": "Decorative mirror being secured to the wall. Clean and secure hanging for home decor in local neighborhoods."
+        },
+        {
+          "file": "mount-picture-hanging.jpg",
+          "title": "Picture Hanging \u2014 Jose Does It Mounting And Installation",
+          "alt": "picture hanging \u2014 professional mounting and installation handyman service in Queens, Brooklyn, or Long Island by Jose Does It LLC",
+          "description": "Picture hanging and alignment in a Queens or Brooklyn home."
+        },
+        {
+          "file": "mount-sconce-install.jpg",
+          "title": "Sconce Install \u2014 Jose Does It Mounting And Installation",
+          "alt": "sconce install \u2014 professional mounting and installation handyman service in Queens, Brooklyn, or Long Island by Jose Does It LLC",
+          "description": "Wall sconce mounted and wired in Queens."
+        },
+        {
+          "file": "mount-clothes-rack-install-brooklyn.jpg",
+          "title": "Clothing Rack Install \u2014 Upper West Side",
+          "alt": "Clothing rack wall mount on the Upper West Side, Manhattan by Jose Does It.",
+          "description": "Clothing rack install on the Upper West Side."
+        },
+        {
+          "file": "mount-heart-neon-install-2.jpg",
+          "title": "Neon Sign Install",
+          "alt": "Neon sign mounted on a painted brick wall by Jose Does It.",
+          "description": "Neon sign install on a painted brick wall."
+        },
+        {
+          "file": "mount-projectvyumjr.png",
+          "title": "Wall Mounting Installation Queens",
+          "alt": "mount-projectvyumjr.png \u2014 Jose Does It handyman service in Queens, Brooklyn, and Long Island",
+          "description": "Wall-mounted installation work in Queens \u2014 tap to view both photos from this project.",
+          "projectId": "wall-mount-pair"
+        },
+        {
+          "file": "mount-project5zktas.png",
+          "title": "Wall Mounting Installation Project",
+          "alt": "mount-project5zktas.png \u2014 Jose Does It handyman service in Queens, Brooklyn, and Long Island",
+          "description": "Second view of the same wall mounting installation in Queens.",
+          "projectId": "wall-mount-pair"
+        },
+        {
+          "file": "furniture-projectizjjfl.png",
+          "title": "Wall Mounting Installation",
+          "alt": "Wall mounting and installation by Jose Does It in NYC.",
+          "description": "Wall mounting and installation work in NYC."
+        }
+      ]
+    },
+    "home": {
+      "images": [
+        {
+          "file": "jdi-background.png",
+          "title": "Jose Does It Handyman Services Hero Image",
+          "alt": "Professional handyman services in Queens, Brooklyn, and Long Island. Clean modern workspace representing Jose Does It quality.",
+          "description": "Hero image showcasing the professional standard of Jose Does It handyman and GC work across New York City areas."
+        },
+        {
+          "file": "painting-floors-moulding.jpg",
+          "title": "Interior Painting and Moulding Work Queens",
+          "alt": "Freshly painted room with new flooring and crown moulding in a Queens or Brooklyn home. Complete interior renovation services.",
+          "description": "Example of full interior refresh including painting, flooring, and trim work. Turnkey home improvement in local neighborhoods."
+        }
+      ]
+    },
+    "logos": {
+      "images": [
+        {
+          "file": "jdi-logo.png",
+          "title": "Jose Does It Handyman and GC Logo",
+          "alt": "Jose Does It LLC logo for handyman and general contracting services in Queens, Brooklyn, and Long Island.",
+          "description": "Official logo for Jose Does It, trusted local handyman and general contractor serving Queens, Brooklyn, and Long Island."
+        }
+      ]
+    }
+  }
+}

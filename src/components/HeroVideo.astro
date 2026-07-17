@@ -1,0 +1,19 @@
+---
+import { HERO_VIDEO } from '../data/home-showcase';
+---
+
+<div class="absolute inset-0 z-0">
+  <video
+    class="w-full h-full object-cover"
+    autoplay
+    muted
+    loop
+    playsinline
+    preload="metadata"
+    poster={HERO_VIDEO.poster}
+    aria-label={HERO_VIDEO.label}
+  >
+    <source src={HERO_VIDEO.mp4} type="video/mp4" />
+  </video>
+  <div class="absolute inset-0 bg-black/45" aria-hidden="true"></div>
+</div>

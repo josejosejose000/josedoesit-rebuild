@@ -1,0 +1,91 @@
+---
+import { NAV_LINKS, PHONE, PHONE_TEL } from '../lib/site';
+
+interface Props {
+  transparent?: boolean;
+  bookHref: string;
+}
+
+const { transparent = false, bookHref } = Astro.props;
+const navLinks = [...NAV_LINKS, { href: bookHref, label: 'Book' as const }];
+---
+
+<header
+  class:list={[
+    'top-0 z-50 w-full',
+    transparent
+      ? 'fixed bg-transparent border-none header-transparent'
+      : 'sticky bg-white/95 backdrop-blur-sm border-b border-gray-200',
+  ]}
+>
+  <nav class="max-w-6xl mx-auto px-4 sm:px-6" aria-label="Main navigation">
+    <div class="flex items-center justify-between py-4 md:py-5">
+      <div class="flex items-center gap-5 md:gap-8">
+        <a href="/" class="shrink-0">
+          <img
+            src="/images/logos/jdi-logo.png"
+            alt="Jose Does It — handyman Brooklyn, Queens, Long Island"
+            class="logo-header w-auto"
+            width="120"
+            height="32"
+            loading="eager"
+            decoding="async"
+          />
+        </a>
+        <div class="hidden md:flex items-center gap-8 text-xs uppercase tracking-[0.15em]">
+          {navLinks.map((link) => (
+            <a href={link.href} class="nav-link hover:opacity-70 transition-opacity">{link.label}</a>
+          ))}
+        </div>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <a href={PHONE_TEL} class="btn-outline whitespace-nowrap">{PHONE}</a>
+        <button
+          id="mobile-menu-btn"
+          class="md:hidden p-2 -mr-2 nav-link"
+          type="button"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+          aria-controls="mobile-nav"
+        >
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path id="menu-icon-open" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16" />
+            <path id="menu-icon-close" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobile-nav" class="mobile-nav-panel md:hidden">
+      <div class="flex flex-col py-4 gap-1 text-sm uppercase tracking-[0.12em] mobile-nav-links">
+        {navLinks.map((link) => (
+          <a href={link.href} class="py-3 px-2 hover:opacity-70 transition-opacity mobile-nav-link">{link.label}</a>
+        ))}
+      </div>
+    </div>
+  </nav>
+</header>
+
+<script>
+  const btn = document.getElementById('mobile-menu-btn');
+  const panel = document.getElementById('mobile-nav');
+  const iconOpen = document.getElementById('menu-icon-open');
+  const iconClose = document.getElementById('menu-icon-close');
+
+  btn?.addEventListener('click', () => {
+    const isOpen = panel?.classList.toggle('open');
+    btn.setAttribute('aria-expanded', String(isOpen));
+    iconOpen?.classList.toggle('hidden', isOpen);
+    iconClose?.classList.toggle('hidden', !isOpen);
+  });
+
+  document.querySelectorAll('.mobile-nav-link').forEach((link) => {
+    link.addEventListener('click', () => {
+      panel?.classList.remove('open');
+      btn?.setAttribute('aria-expanded', 'false');
+      iconOpen?.classList.remove('hidden');
+      iconClose?.classList.add('hidden');
+    });
+  });
+</script>

@@ -1,0 +1,73 @@
+---
+import Layout from '../layouts/Layout.astro';
+import galleries from '../data/galleries-content.json';
+import GalleryGrid from './GalleryGrid.astro';
+import BookingCTA from './BookingCTA.astro';
+import { getPrevNextGallery } from '../lib/gallery';
+import type { GallerySlug } from '../lib/site';
+
+interface Props {
+  galleryKey: GallerySlug;
+  pageTitle: string;
+  pageDescription: string;
+  bookingHeading: string;
+  bookingDescription: string;
+}
+
+const { galleryKey, pageTitle, pageDescription, bookingHeading, bookingDescription } = Astro.props;
+
+const gallery = galleries[galleryKey];
+const { prev, next } = getPrevNextGallery(galleryKey);
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <article class="section-padding">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <header class="max-w-3xl mb-10 md:mb-14">
+        <p class="text-xs uppercase tracking-[0.2em] text-gray-500 mb-4">
+          <a href="/services" class="hover:underline">Services</a>
+          <span class="mx-2">/</span>
+          <span>{gallery.title}</span>
+        </p>
+        <h1 class="text-3xl md:text-4xl font-bold tracking-tight uppercase mb-5">
+          {gallery.title}
+        </h1>
+        <p class="text-sm md:text-base leading-relaxed text-gray-600">
+          {gallery.intro}
+        </p>
+      </header>
+
+      <GalleryGrid folder={galleryKey} />
+
+      <nav
+        class="flex flex-col sm:flex-row justify-between items-center gap-4 mt-12 md:mt-16 pt-8 border-t border-gray-100"
+        aria-label="Gallery navigation"
+      >
+        {prev ? (
+          <a
+            href={`/services/${prev}`}
+            class="text-xs uppercase tracking-[0.15em] hover:underline flex items-center gap-2"
+          >
+            <span aria-hidden="true">←</span>
+            {galleries[prev].title}
+          </a>
+        ) : (
+          <span></span>
+        )}
+        {next ? (
+          <a
+            href={`/services/${next}`}
+            class="text-xs uppercase tracking-[0.15em] hover:underline flex items-center gap-2"
+          >
+            {galleries[next].title}
+            <span aria-hidden="true">→</span>
+          </a>
+        ) : (
+          <span></span>
+        )}
+      </nav>
+    </div>
+  </article>
+
+  <BookingCTA heading={bookingHeading} description={bookingDescription} />
+</Layout>

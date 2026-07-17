@@ -1,0 +1,15 @@
+---
+import ServiceGalleryLayout from '../../components/ServiceGalleryLayout.astro';
+import { GALLERY_ORDER, type GallerySlug } from '../../lib/site';
+import { SERVICE_PAGES } from '../../data/service-pages';
+
+export function getStaticPaths() {
+  return GALLERY_ORDER.map((slug) => ({ params: { slug } }));
+}
+
+const { slug } = Astro.params;
+const galleryKey = slug as GallerySlug;
+const meta = SERVICE_PAGES[galleryKey];
+---
+
+<ServiceGalleryLayout galleryKey={galleryKey} {...meta} />

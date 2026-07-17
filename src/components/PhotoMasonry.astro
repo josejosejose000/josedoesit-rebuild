@@ -1,0 +1,238 @@
+---
+interface Slide {
+  src: string;
+  title?: string;
+  alt: string;
+  description?: string;
+}
+
+interface GalleryItem {
+  thumbnail: Slide;
+  slides: Slide[];
+  projectId?: string;
+}
+
+interface Props {
+  /** Flat list — homepage showcase */
+  images?: {
+    src: string;
+    title?: string;
+    alt: string;
+    description?: string;
+    href?: string;
+  }[];
+  /** Grouped gallery items — one thumbnail per project */
+  items?: GalleryItem[];
+  lightbox?: boolean;
+  numbered?: boolean;
+}
+
+const { images, items: groupedItems, lightbox = false, numbered = false } = Astro.props;
+
+const items: GalleryItem[] =
+  groupedItems ??
+  (images ?? []).map((image) => ({
+    thumbnail: image,
+    slides: [image],
+  }));
+
+const rootId = `gallery-${Math.random().toString(36).slice(2, 9)}`;
+---
+
+<div
+  id={rootId}
+  class="photo-grid grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4"
+  data-lightbox={lightbox ? 'true' : undefined}
+>
+  {items.map((item, index) => {
+    const image = item.thumbnail;
+    const slideCount = item.slides.length;
+    const slidesJson = JSON.stringify(item.slides);
+    const href = 'href' in image ? (image as { href?: string }).href : undefined;
+
+    return (
+      <div class="photo-grid-item">
+        <figure class="photo-grid-figure">
+          {lightbox ? (
+            <button
+              type="button"
+              class="photo-grid-trigger block w-full overflow-hidden text-left cursor-zoom-in border-0 p-0 bg-transparent relative"
+              data-lightbox-slides={slidesJson}
+              data-lightbox-number={numbered ? String(index + 1) : ''}
+              aria-label={
+                slideCount > 1
+                  ? `${image.title ?? image.alt}. Project with ${slideCount} photos. Open gallery.`
+                  : `${image.title ?? image.alt}. Open image.`
+              }
+            >
+              <img
+                src={image.src}
+                alt={image.alt}
+                loading="lazy"
+                decoding="async"
+                class="w-full h-auto"
+              />
+              {slideCount > 1 && (
+                <span class="photo-grid-count" aria-hidden="true">
+                  {slideCount} photos
+                </span>
+              )}
+            </button>
+          ) : href ? (
+            <a href={href} class="block overflow-hidden relative">
+              <img
+                src={image.src}
+                alt={image.alt}
+                loading="lazy"
+                decoding="async"
+                class="w-full h-auto"
+              />
+            </a>
+          ) : (
+            <img
+              src={image.src}
+              alt={image.alt}
+              loading="lazy"
+              decoding="async"
+              class="w-full h-auto"
+            />
+          )}
+          {(numbered || image.title || image.description) && (
+            <figcaption class="photo-grid-caption">
+              {numbered && <p class="photo-grid-number">#{index + 1}</p>}
+              {image.title && <p class="photo-grid-title">{image.title}</p>}
+              {image.description ? (
+                <p class="photo-grid-description">{image.description}</p>
+              ) : slideCount > 1 ? (
+                <p class="photo-grid-description">
+                  Tap to view {slideCount} photos from this project
+                </p>
+              ) : null}
+            </figcaption>
+          )}
+        </figure>
+      </div>
+    );
+  })}
+</div>
+
+{lightbox && (
+  <>
+    <div
+      id={`${rootId}-lightbox`}
+      class="lightbox"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Image preview"
+      hidden
+    >
+      <button type="button" class="lightbox-backdrop" data-lightbox-close aria-label="Close preview"></button>
+      <div class="lightbox-content">
+        <button type="button" class="lightbox-close" data-lightbox-close aria-label="Close">×</button>
+        <button type="button" class="lightbox-nav lightbox-prev" data-lightbox-prev aria-label="Previous image">‹</button>
+        <div class="lightbox-figure">
+          <img class="lightbox-image" src="" alt="" />
+          <div class="lightbox-caption">
+            <p class="lightbox-number"></p>
+            <p class="lightbox-counter"></p>
+            <p class="lightbox-title"></p>
+            <p class="lightbox-description"></p>
+          </div>
+        </div>
+        <button type="button" class="lightbox-nav lightbox-next" data-lightbox-next aria-label="Next image">›</button>
+      </div>
+    </div>
+    <script define:vars={{ rootId }}>
+      (function initLightbox(id) {
+        const root = document.getElementById(id);
+        const dialog = document.getElementById(`${id}-lightbox`);
+        if (!root || !dialog) return;
+
+        const triggers = [...root.querySelectorAll('[data-lightbox-slides]')];
+        const img = dialog.querySelector('.lightbox-image');
+        const titleEl = dialog.querySelector('.lightbox-title');
+        const numberEl = dialog.querySelector('.lightbox-number');
+        const counterEl = dialog.querySelector('.lightbox-counter');
+        const descriptionEl = dialog.querySelector('.lightbox-description');
+        const captionEl = dialog.querySelector('.lightbox-caption');
+        const prevBtn = dialog.querySelector('[data-lightbox-prev]');
+        const nextBtn = dialog.querySelector('[data-lightbox-next]');
+
+        let slides = [];
+        let current = 0;
+        let lastFocus = null;
+
+        function show(index) {
+          if (!slides.length) return;
+          current = (index + slides.length) % slides.length;
+          const item = slides[current];
+          if (img) {
+            img.src = item.src;
+            img.alt = item.alt;
+          }
+          if (titleEl) titleEl.textContent = item.title ?? '';
+          if (descriptionEl) descriptionEl.textContent = item.description ?? '';
+          if (counterEl) {
+            counterEl.textContent =
+              slides.length > 1 ? `Photo ${current + 1} of ${slides.length}` : '';
+          }
+          if (captionEl) {
+            captionEl.hidden = !item.title && !item.description && slides.length <= 1;
+          }
+          const multi = slides.length > 1;
+          if (prevBtn) prevBtn.hidden = !multi;
+          if (nextBtn) nextBtn.hidden = !multi;
+        }
+
+        function open(trigger) {
+          const raw = trigger.getAttribute('data-lightbox-slides') ?? '[]';
+          try {
+            slides = JSON.parse(raw);
+          } catch {
+            slides = [];
+          }
+          if (numberEl) {
+            const n = trigger.getAttribute('data-lightbox-number');
+            numberEl.textContent = n ? `#${n}` : '';
+          }
+          lastFocus = trigger;
+          show(0);
+          dialog.hidden = false;
+          document.body.classList.add('lightbox-open');
+          dialog.querySelector('[data-lightbox-close]')?.focus();
+        }
+
+        function close() {
+          dialog.hidden = true;
+          document.body.classList.remove('lightbox-open');
+          slides = [];
+          current = 0;
+          if (img) img.src = '';
+          if (numberEl) numberEl.textContent = '';
+          if (counterEl) counterEl.textContent = '';
+          if (titleEl) titleEl.textContent = '';
+          if (descriptionEl) descriptionEl.textContent = '';
+          lastFocus?.focus();
+        }
+
+        triggers.forEach((trigger) => {
+          trigger.addEventListener('click', () => open(trigger));
+        });
+
+        dialog.querySelectorAll('[data-lightbox-close]').forEach((btn) => {
+          btn.addEventListener('click', close);
+        });
+
+        prevBtn?.addEventListener('click', () => show(current - 1));
+        nextBtn?.addEventListener('click', () => show(current + 1));
+
+        dialog.addEventListener('keydown', (e) => {
+          if (dialog.hidden) return;
+          if (e.key === 'Escape') close();
+          if (e.key === 'ArrowLeft' && slides.length > 1) show(current - 1);
+          if (e.key === 'ArrowRight' && slides.length > 1) show(current + 1);
+        });
+      })(rootId);
+    </script>
+  </>
+)}

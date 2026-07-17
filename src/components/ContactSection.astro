@@ -1,0 +1,27 @@
+---
+import { EMAIL, PHONE, PHONE_TEL } from '../lib/site';
+
+interface Props {
+  heading?: string;
+  class?: string;
+}
+
+const {
+  heading = 'Get in Touch',
+  class: className = '',
+} = Astro.props;
+---
+
+<section class={`section-padding border-t border-gray-100 bg-white ${className}`}>
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
+    <h2 class="text-xl md:text-2xl font-bold tracking-tight mb-4 uppercase">{heading}</h2>
+    <p class="text-sm text-gray-600 mb-8 leading-relaxed">
+      Serving Brooklyn, Queens, and Long Island. Call, email, or book online — most jobs same day or next day.
+    </p>
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 text-sm">
+      <a href={PHONE_TEL} class="btn-outline whitespace-nowrap">{PHONE}</a>
+      <a href={`mailto:${EMAIL}`} class="hover:underline">{EMAIL}</a>
+      <a href="/book" class="btn-primary whitespace-nowrap">Book Online</a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,89 @@
+---
+import '../styles/global.css';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import GoogleReviewBanner from '../components/GoogleReviewBanner.astro';
+import googleReviews from '../data/google-reviews.json';
+import { SITE_URL } from '../lib/site';
+
+interface Props {
+  title?: string;
+  description?: string;
+  acuity?: boolean;
+  transparentHeader?: boolean;
+  /** Hide the Google review strip (e.g. homepage places it below the hero) */
+  hideGoogleBanner?: boolean;
+}
+
+const {
+  title = 'Jose Does It | Handyman Queens, Brooklyn & Long Island',
+  description = 'Professional handyman services in Queens, Brooklyn & Long Island. On time, clear pricing, quality work. TV mounting, furniture assembly, decks, painting, carpentry.',
+  acuity = false,
+  transparentHeader = false,
+  hideGoogleBanner = false,
+} = Astro.props;
+
+const bookHref = Astro.url.pathname === '/' ? '#book' : '/book';
+
+const localBusinessSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'HomeAndConstructionBusiness',
+  name: 'Jose Does It LLC',
+  url: SITE_URL,
+  telephone: '+1-347-856-3025',
+  email: 'Iamjoseguzman@gmail.com',
+  image: `${SITE_URL}/images/logos/jdi-logo.png`,
+  description,
+  areaServed: [
+    { '@type': 'City', name: 'Brooklyn', containedInPlace: { '@type': 'State', name: 'New York' } },
+    { '@type': 'City', name: 'Queens', containedInPlace: { '@type': 'State', name: 'New York' } },
+    { '@type': 'PostalAddress', postalCode: '11375', addressLocality: 'Forest Hills', addressRegion: 'NY' },
+    { '@type': 'Place', name: 'Long Island', containedInPlace: { '@type': 'State', name: 'New York' } },
+  ],
+  priceRange: '$$',
+  sameAs: ['https://www.instagram.com/josejosejosedoesit', 'https://www.tiktok.com/@josejosejosedoesit'],
+  ...(googleReviews.enabled &&
+    googleReviews.url &&
+    googleReviews.rating && {
+      aggregateRating: {
+        '@type': 'AggregateRating',
+        ratingValue: googleReviews.rating,
+        bestRating: 5,
+        ...(typeof googleReviews.reviewCount === 'number' &&
+          googleReviews.reviewCount > 0 && { ratingCount: googleReviews.reviewCount }),
+      },
+    }),
+};
+---
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_US" />
+  <link rel="icon" type="image/png" href="/images/logos/jdi-logo.png" />
+  <script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
+</head>
+<body class="font-sans text-[#1a1a1a] bg-white">
+  <Nav transparent={transparentHeader} bookHref={bookHref} />
+
+  {!hideGoogleBanner && <GoogleReviewBanner />}
+
+  <main>
+    <slot />
+  </main>
+
+  <Footer />
+
+  {acuity && (
+    <script is:inline src="https://embed.acuityscheduling.com/js/embed.js"></script>
+  )}
+</body>
+</html>

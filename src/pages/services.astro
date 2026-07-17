@@ -1,0 +1,40 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ContactSection from '../components/ContactSection.astro';
+import galleries from '../data/galleries-content.json';
+---
+
+<Layout
+  title="Handyman Services Queens, Brooklyn & Long Island | Jose Does It"
+  description="TV mounting, furniture assembly, painting, carpentry, decks & sheds in Queens 11375, Brooklyn & Long Island. View project galleries and book online."
+>
+  <article class="section-padding">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <header class="mb-10 md:mb-14">
+        <h1 class="text-3xl md:text-4xl font-bold tracking-tight uppercase mb-4">Services Offered</h1>
+        <p class="text-sm md:text-base text-gray-600 max-w-2xl leading-relaxed">
+          Professional handyman work across Queens, Brooklyn, and Long Island. Browse galleries by service type.
+        </p>
+      </header>
+
+      <div class="grid sm:grid-cols-2 gap-4 md:gap-6">
+        {Object.entries(galleries).map(([key, g]) => (
+          <a
+            href={`/services/${key}`}
+            class="block border border-gray-200 p-6 md:p-8 hover:bg-gray-50 transition group"
+          >
+            <h2 class="font-bold text-xl md:text-2xl tracking-tight group-hover:underline">{g.title}</h2>
+            <p class="mt-3 text-sm leading-relaxed text-gray-600 line-clamp-4">{g.intro}</p>
+            <span class="inline-block mt-4 text-xs uppercase tracking-[0.15em] group-hover:underline">View Gallery →</span>
+          </a>
+        ))}
+      </div>
+
+      <div class="mt-12 md:mt-16 text-center">
+        <a href="/book" class="btn-primary">Click Here to Book</a>
+      </div>
+    </div>
+  </article>
+
+  <ContactSection class="bg-gray-50/50" />
+</Layout>

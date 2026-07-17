@@ -1,0 +1,108 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ContactSection from '../components/ContactSection.astro';
+import AcuityEmbed from '../components/AcuityEmbed.astro';
+import HeroVideo from '../components/HeroVideo.astro';
+import GoogleReviewBanner from '../components/GoogleReviewBanner.astro';
+import TestimonialsCarousel from '../components/TestimonialsCarousel.astro';
+import PhotoMasonry from '../components/PhotoMasonry.astro';
+import SectionHeader from '../components/SectionHeader.astro';
+import home from '../data/home-content.json';
+import { HOME_META, SHOWCASE_PHOTOS } from '../data/home-showcase';
+import { getGalleryImage } from '../lib/gallery';
+import { PHONE, PHONE_TEL } from '../lib/site';
+
+const showcasePhotos = SHOWCASE_PHOTOS.map(({ folder, file }, index) => {
+  const meta = getGalleryImage(folder, file, index);
+  return {
+    src: `/images/${folder}/${file}`,
+    title: meta.title,
+    alt: meta.alt,
+    description: meta.description,
+    href: `/services/${folder}`,
+  };
+});
+---
+
+<Layout
+  title={HOME_META.title}
+  description={HOME_META.description}
+  acuity={true}
+  transparentHeader={true}
+  hideGoogleBanner={true}
+>
+  <section class="relative min-h-[70vh] md:min-h-[80vh] flex items-center justify-center overflow-hidden">
+    <HeroVideo />
+
+    <div class="relative z-10 text-center px-6 py-20 max-w-4xl mx-auto">
+      <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-[1.08] uppercase">
+        {home.hero.headline}
+      </h1>
+      <a href="#book" class="btn-primary hero-cta">
+        {home.hero.cta}
+      </a>
+      <p class="mt-5 text-sm text-white/80">
+        Or call <a href={PHONE_TEL} class="underline hover:text-white">{PHONE}</a>
+      </p>
+    </div>
+  </section>
+
+  <GoogleReviewBanner />
+
+  <section class="section-padding compact-top bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="grid md:grid-cols-3 gap-12 md:gap-10">
+        {home.features.map((f) => (
+          <div class="text-center md:text-left">
+            <h3 class="font-bold text-sm md:text-base tracking-[0.2em] uppercase mb-4">{f.title}</h3>
+            <p class="text-sm leading-relaxed text-gray-600">{f.text}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <TestimonialsCarousel intro={home.testimonials_intro} />
+
+  <section class="section-padding border-t border-gray-100 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <SectionHeader
+        eyebrow="Recent Work"
+        title="Quality handyman projects across Brooklyn, Queens & Long Island"
+        class="mb-10 md:mb-14"
+      />
+
+      <PhotoMasonry images={showcasePhotos} />
+
+      <p class="text-center mt-10 md:mt-14">
+        <a href="/services" class="text-xs uppercase tracking-[0.2em] hover:underline">
+          View All Services →
+        </a>
+      </p>
+    </div>
+  </section>
+
+  <section class="section-padding border-t border-gray-100 bg-white" id="book">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-8 md:mb-10">
+        <h2 class="text-2xl md:text-3xl font-bold tracking-tight mb-4 uppercase">
+          {home.booking}
+        </h2>
+        <p class="text-sm text-gray-600 max-w-lg mx-auto leading-relaxed">
+          Choose a date and time that works best for you. Need extra time? Book extra time upfront to ensure we can thoroughly complete your service.
+        </p>
+        <p class="mt-3 text-sm text-gray-500 max-w-lg mx-auto">
+          Use the calendar below to select the specific service you'd like. We'll collect more details about your appointment in the next step.
+        </p>
+      </div>
+
+      <AcuityEmbed />
+
+      <p class="text-center mt-6 text-xs text-gray-500">
+        Or call <a href={PHONE_TEL} class="hover:underline">{PHONE}</a>
+      </p>
+    </div>
+  </section>
+
+  <ContactSection class="bg-gray-50/50 border-t border-gray-100" />
+</Layout>

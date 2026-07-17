@@ -1,0 +1,155 @@
+---
+import Layout from '../layouts/Layout.astro';
+import priceGuide from '../data/price-guide.json';
+
+const furnitureCategories: { key: keyof typeof priceGuide.furniture; label: string }[] = [
+  { key: 'bedFrame', label: 'Bed Frames' },
+  { key: 'chairs', label: 'Chairs & Seating' },
+  { key: 'homeOffice', label: 'Home Office' },
+  { key: 'dresser', label: 'Dressers & Wardrobes' },
+  { key: 'tvStands', label: 'TV Stands & Living Room' },
+  { key: 'homeGym', label: 'Home Gym' },
+  { key: 'outdoor', label: 'Outdoor — Decks, Sheds & More' },
+];
+---
+
+<Layout
+  title="Price Guide | Jose Does It — Handyman Services Queens, Brooklyn & Long Island"
+  description="Handyman price guide for Queens 11375, Brooklyn & Long Island. Time estimates for TV mounting, furniture assembly, painting, decks & sheds. $80 first hour, $65 after."
+>
+  <article class="section-padding">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      <header class="mb-10 md:mb-14">
+        <h1 class="text-3xl md:text-4xl font-bold tracking-tight uppercase mb-5">Price Guide</h1>
+        <p class="text-sm md:text-base leading-relaxed text-gray-600 max-w-2xl">
+          Real time estimates so you know what to expect before we start. No surprises.
+        </p>
+        <p class="mt-4 text-sm font-semibold tracking-wide">
+          $80 for the first hour · $65 each additional hour
+        </p>
+      </header>
+
+      <!-- Mounting & Installation -->
+      <section class="mb-12 md:mb-16">
+        <h2 class="font-bold text-sm md:text-base tracking-[0.2em] uppercase mb-5 pb-3 border-b border-gray-200">
+          Mounting &amp; Installation
+        </h2>
+        <div class="overflow-x-auto -mx-4 sm:mx-0">
+          <table class="w-full min-w-[320px] text-sm">
+            <thead>
+              <tr class="border-b border-gray-200 text-left text-xs uppercase tracking-wider text-gray-500">
+                <th class="py-3 px-4 sm:px-0 font-medium">Item</th>
+                <th class="py-3 px-4 sm:px-0 font-medium whitespace-nowrap">Est. Time</th>
+              </tr>
+            </thead>
+            <tbody>
+              {priceGuide.mounting.map((row) => (
+                <tr class="border-b border-gray-100 last:border-0 hover:bg-gray-50/50">
+                  <td class="py-3 px-4 sm:px-0">{row.item}</td>
+                  <td class="py-3 px-4 sm:px-0 text-gray-600 whitespace-nowrap">{row.time}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Furniture Assembly -->
+      <section class="mb-12 md:mb-16">
+        <h2 class="font-bold text-sm md:text-base tracking-[0.2em] uppercase mb-8 pb-3 border-b border-gray-200">
+          Furniture Assembly
+        </h2>
+        <div class="space-y-10">
+          {furnitureCategories.map(({ key, label }) => (
+            <div>
+              <h3 class="font-semibold text-sm uppercase tracking-wide mb-4 text-gray-800">{label}</h3>
+              <div class="overflow-x-auto -mx-4 sm:mx-0">
+                <table class="w-full min-w-[320px] text-sm">
+                  <thead>
+                    <tr class="border-b border-gray-200 text-left text-xs uppercase tracking-wider text-gray-500">
+                      <th class="py-2 px-4 sm:px-0 font-medium">Item</th>
+                      <th class="py-2 px-4 sm:px-0 font-medium whitespace-nowrap">Est. Time</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {priceGuide.furniture[key].map((row) => (
+                      <tr class="border-b border-gray-100 last:border-0 hover:bg-gray-50/50">
+                        <td class="py-2.5 px-4 sm:px-0">{row.item}</td>
+                        <td class="py-2.5 px-4 sm:px-0 text-gray-600 whitespace-nowrap">{row.time}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <!-- Painting & Wallpaper -->
+      <section class="mb-12 md:mb-16">
+        <h2 class="font-bold text-sm md:text-base tracking-[0.2em] uppercase mb-8 pb-3 border-b border-gray-200">
+          Painting &amp; Wallpaper
+        </h2>
+
+        <div class="space-y-10">
+          <div>
+            <h3 class="font-semibold text-sm uppercase tracking-wide mb-4 text-gray-800">Interior Painting</h3>
+            <div class="overflow-x-auto -mx-4 sm:mx-0">
+              <table class="w-full min-w-[320px] text-sm">
+                <thead>
+                  <tr class="border-b border-gray-200 text-left text-xs uppercase tracking-wider text-gray-500">
+                    <th class="py-2 px-4 sm:px-0 font-medium">Room Size</th>
+                    <th class="py-2 px-4 sm:px-0 font-medium whitespace-nowrap">Est. Time</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {priceGuide.painting.painting.map((row) => (
+                    <tr class="border-b border-gray-100 last:border-0 hover:bg-gray-50/50">
+                      <td class="py-2.5 px-4 sm:px-0">{row.item}</td>
+                      <td class="py-2.5 px-4 sm:px-0 text-gray-600 whitespace-nowrap">{row.time}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="font-semibold text-sm uppercase tracking-wide mb-4 text-gray-800">Wallpaper</h3>
+            <div class="overflow-x-auto -mx-4 sm:mx-0">
+              <table class="w-full min-w-[320px] text-sm">
+                <thead>
+                  <tr class="border-b border-gray-200 text-left text-xs uppercase tracking-wider text-gray-500">
+                    <th class="py-2 px-4 sm:px-0 font-medium">Room Size</th>
+                    <th class="py-2 px-4 sm:px-0 font-medium whitespace-nowrap">Est. Time</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {priceGuide.painting.wallpaper.map((row) => (
+                    <tr class="border-b border-gray-100 last:border-0 hover:bg-gray-50/50">
+                      <td class="py-2.5 px-4 sm:px-0">{row.item}</td>
+                      <td class="py-2.5 px-4 sm:px-0 text-gray-600 whitespace-nowrap">{row.time}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Estimate Note -->
+      <aside class="border-t border-gray-200 pt-8 mb-10">
+        <p class="text-sm text-gray-600 leading-relaxed">
+          {priceGuide.note} Prices may vary based on complexity, materials, and site conditions. Final time and cost are confirmed on-site or via photos before work begins.
+        </p>
+        <p class="mt-3 text-sm text-gray-500">
+          Questions? Call <a href="tel:3478563025" class="hover:underline">(347) 856-3025</a>
+        </p>
+      </aside>
+
+      <a href="/book" class="btn-primary">Book Your Service</a>
+    </div>
+  </article>
+</Layout>
