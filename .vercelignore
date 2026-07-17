@@ -1,0 +1,18 @@
+# Keep deploy under size limits — unused duplicates / temps
+public/images/galleries/**
+**/tempImage*
+**/tempImage*.png
+**/tempImage*.jpg
+
+# Local-only
+.git/**
+.astro/**
+dist/**
+node_modules/**
+*.bak.png
+*.bak.mp4
+CURSOR-READY.md
+josedoesit-rebuild-plan.md
+style/**
+scripts/**
+.vscode/**
